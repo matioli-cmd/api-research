@@ -80,18 +80,14 @@ html{
 
 .Search-container {
   display: flex;
-  font-size: 25px;
+  font-size: 20px;
   justify-content: flex-start;
   align-items: center;
   text-align: left;
   border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: rgb(255, 255, 255);
   max-width: 900px; 
   padding: 20px 20px;
   box-sizing: border-box;
-  margin-bottom: 10px;
-  margin-top: 20px;
 }
 
 .Search-container input,
@@ -346,15 +342,13 @@ html, body {
 }
 
 .Terminal code {
-  font-size: 13px;
+  font-size: 15px;
   color: rgb(249, 206, 119);
   display: block; 
   word-wrap: break-word; 
   max-width: 375px; 
   white-space: normal; 
 }
-
-
 
 .Terminal {
   display: flex;
@@ -374,7 +368,7 @@ html, body {
   flex-direction: column;
   padding-left: 20px;
   color: #f8f8f2;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.6;
 }
 
@@ -382,10 +376,82 @@ html, body {
   margin: 0px 0;
 }
 
+.Advanced{
+  margin-top: 15px;
+  color: #d73b4b;
+  font-weight: bold;
+}
+
+.Intermediate{
+  margin-top: 15px;
+  color: rgb(255, 139, 56);
+  font-weight: bold;
+}
+
+.Beginner{
+  margin-top: 15px;
+  color: rgb(75, 173, 92);
+  font-weight: bold;
+}
+
+.favoriteItems{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homeTitle{
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: white;
+    height: auto;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+  }
+
+
+.favoriteTitle{
+  font-size: 25px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: white;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.unavailable{
+  text-align: center;
+  font-size: 30px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 @media (max-width: 600px) {
   .API {
     padding: 15px;
-    width: 400px;
+    width: 450px;
   }
   .API h1 {
     font-size: 20px;
@@ -455,7 +521,6 @@ html, body {
   }
 }
 
-
 @media (max-width: 470px) {
   .Terminal code {
     font-size: 13px;
@@ -468,7 +533,7 @@ html, body {
   
   .API {
     padding: 15px;
-    width: 300px;
+    width: 350px;
   }
   .API h1 {
     font-size: 20px;

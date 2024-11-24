@@ -1,20 +1,12 @@
 import { Link } from "react-router-dom"
 import { MdFavoriteBorder } from "react-icons/md";
 import { MdFavorite } from "react-icons/md";
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
+import { ItemsContext } from './App.jsx';
 
 function Api({api}){
-
-    const [heartClicked, setHeartClicked] = useState(false)
-
-    function handleFavorite(){
-        if(!heartClicked){
-            setHeartClicked(true)
-        }
-        else{
-            setHeartClicked(false)
-        }
-    }
+    
+    const context = useContext(ItemsContext)
 
     return(
         
@@ -26,9 +18,10 @@ function Api({api}){
             </Link>
           </h1>
           <p>{api.brief_desc}</p>
+          <p className={`${api.difficulty}`}>{api.difficulty}</p>
         </div>
-        <div className="Favorite" onClick={handleFavorite}>
-          {heartClicked ? (
+        <div className="Favorite" onClick={() => context.handleFavorite(api.name)}>
+          {context.favorites.includes(api.name) ? (
             <MdFavorite />
           ) : (
             <MdFavoriteBorder />

@@ -7,7 +7,13 @@ function Home({apiItems}){
 
         <div className="Home">
 
+            <div className="homeTitle">
+
+            <h1>API FEED</h1>
+
             <Filter></Filter>
+            
+            </div>
 
             <div className="Test">
 
