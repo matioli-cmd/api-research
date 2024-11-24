@@ -285,7 +285,7 @@ html, body {
   text-transform: uppercase;
   letter-spacing: 1px;
   background-color: white;
-  width: 800px;
+  width: 650px;
   height: auto;
   display: flex;
   justify-content: center;
@@ -300,8 +300,8 @@ html, body {
   border-radius: 10px;
   padding: 20px 20px;
   background-color: white;
-  min-width: 800px;
-  max-width: 800px;
+  min-width: 650px;
+  max-width: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -315,7 +315,7 @@ html, body {
   border-radius: 10px;
   padding: 20px;
   background-color: white;
-  width: 800px;
+  width: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -407,6 +407,87 @@ html, body {
   .API_title {
     font-size: 20px;
     padding: 15px;
+    width: 100%;
+  }
+
+  .API_description {
+    margin-top: 10px;
+    padding: 15px;
+    min-width: 100%; 
+    max-width: 100%;
+  }
+
+
+  .API_example {
+    padding: 15px;
+    width: 100%;
+  }
+
+
+  .Terminal {
+    width: 100%;  
+    height: auto; 
+  }
+
+  .lineNumber {
+    font-size: 16px;
+  }
+
+  .code-content {
+    padding-left: 10px; 
+    font-size: 12px; 
+  }
+
+
+  .Search-container input,
+  .Search-container select {
+    margin: 0 10px;
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+  }
+
+  .Search-container {
+    padding: 10px;
+  }
+}
+
+  
+
+
+@media (max-width: 470px) {
+  .API {
+    padding: 15px;
+    width: 220px;
+  }
+  .API h1 {
+    font-size: 20px;
+  }
+  .Search-container input,
+.Search-container select {
+  margin: 0 10px;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+}
+
+.Search-container{
+  padding: 5px 10px;
+}
+
+
+  .API_properties {
+    padding: 15px;
+    width: 100%; 
+  }
+
+
+  .API_title {
+    font-size: 20px;
+    padding: 15px;
+    width: 100%;
   }
 
   .API_description {
