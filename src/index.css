@@ -441,9 +441,9 @@ html, body {
 
   .Search-container input,
   .Search-container select {
-    margin: 0 10px;
+    margin: 5px 30px;
     padding: 8px;
-    font-size: 15px;
+    font-size: 17px;
     border-radius: 5px;
     border: 2px solid #ccc;
   }
@@ -520,7 +520,7 @@ html, body {
 
   .Search-container input,
   .Search-container select {
-    margin: 0 10px;
+    margin: 5px 30px;
     padding: 8px;
     font-size: 15px;
     border-radius: 5px;
@@ -529,6 +529,8 @@ html, body {
 
   .Search-container {
     padding: 10px;
+    flex-direction: column;
+    
   }
 }
 

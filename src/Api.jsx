@@ -21,7 +21,7 @@ function Api({api}){
         <div className="API">
         <div className="attributes">
           <h1>
-            <Link to={`/api/${api.name}`} className="api-link">
+            <Link to={`/api-research/api/${api.name}`} className="api-link">
               {api.name}
             </Link>
           </h1>

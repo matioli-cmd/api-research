@@ -6,6 +6,7 @@ import Missing from "./Missing"
 import About from "./About"
 import Title from "./Title"
 import {Routes, Route, Router} from 'react-router-dom'
+import Favorites from "./Favorites"
 
 function App() {
   
@@ -46,17 +47,21 @@ function App() {
     <>
     <Title></Title>
     <Header></Header>
+
     <Routes>
 
-      <Route path="/" element={ <Home apiItems={apiItems}></Home>}></Route>
+      <Route path="/api-research/" element={ <Home apiItems={apiItems}></Home>}></Route>
 
-      <Route path="/api/:name" element={<ApiPage apiItems={apiItems}></ApiPage>}></Route>
+      <Route path="/api-research/api/:name" element={<ApiPage apiItems={apiItems}></ApiPage>}></Route>
 
       <Route path="*" element={<Missing></Missing>}></Route>
 
-      <Route path="/about" element={<About></About>}></Route>
+      <Route path="/api-research/about" element={<About></About>}></Route>
+
+      <Route path="/api-research/favorites" element={<Favorites></Favorites>}></Route>
 
     </Routes>
+
     </>
   )
 }
