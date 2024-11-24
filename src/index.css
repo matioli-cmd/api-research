@@ -450,10 +450,9 @@ html, body {
 
   .Search-container {
     padding: 10px;
+    flex-direction: column;
   }
 }
-
-  
 
 
 @media (max-width: 470px) {
