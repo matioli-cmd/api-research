@@ -3,7 +3,7 @@ import Header from "./Header"
 import { useState } from "react"
 import ApiPage from "./ApiPage"
 import Missing from "./Missing"
-import About from "./About"
+import FAQ from "./FAQ"
 import Title from "./Title"
 import {Routes, Route, Router} from 'react-router-dom'
 import Favorites from "./Favorites"
@@ -56,7 +56,7 @@ function App() {
 
       <Route path="*" element={<Missing></Missing>}></Route>
 
-      <Route path="/api-research/about" element={<About></About>}></Route>
+      <Route path="/api-research/faq" element={<FAQ></FAQ>}></Route>
 
       <Route path="/api-research/favorites" element={<Favorites></Favorites>}></Route>
 
