@@ -328,7 +328,7 @@ html, body {
   border-radius: 10px;
   padding: 10px;
   background-color: rgb(44, 43, 43);
-  width: 600px;
+  width: 500px;
   height: 310px;
   display: flex;
   flex-direction: row; 
@@ -350,7 +350,7 @@ html, body {
   color: rgb(249, 206, 119);
   display: block; 
   word-wrap: break-word; 
-  max-width: 400px; 
+  max-width: 375px; 
   white-space: normal; 
 }
 
@@ -390,19 +390,6 @@ html, body {
   .API h1 {
     font-size: 20px;
   }
-  .Search-container input,
-.Search-container select {
-  margin: 0 10px;
-  padding: 5px;
-  font-size: 15px;
-  border-radius: 5px;
-  border: 2px solid #ccc;
-}
-
-.Search-container{
-  padding: 15px 10px;
-}
-
 
   .API_properties {
     padding: 15px;
@@ -469,19 +456,6 @@ html, body {
   .API h1 {
     font-size: 20px;
   }
-  .Search-container input,
-.Search-container select {
-  margin: 0 10px;
-  padding: 5px;
-  font-size: 15px;
-  border-radius: 5px;
-  border: 2px solid #ccc;
-}
-
-.Search-container{
-  padding: 5px 10px;
-}
-
 
   .API_properties {
     padding: 15px;
@@ -496,7 +470,7 @@ html, body {
   }
 
   .API_description {
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 15px;
     min-width: 100%; 
     max-width: 100%;

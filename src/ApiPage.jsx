@@ -59,7 +59,7 @@ function ApiPage({apiItems}){
       <p class="lineNumber">12</p>
     </div>
     <div class="code-content">
-      <p class="code-line"><code>const apiUrl = 'https://jsonplaceholder.typicode.com/posts';</code></p>
+      <p class="code-line"><code>const apiUrl = 'https://jsonplaceholder.typicode.com/postsssssssssssss';</code></p>
       <p class="code-line">&nbsp;</p>
       <p class="code-line"><code>fetch(apiUrl)</code></p>
       <p class="code-line"><code>&nbsp;.then(response =&gt; response.json())</code> </p>
