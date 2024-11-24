@@ -1,7 +1,12 @@
 import ApiList from "./apiList"
 import Filter from "./Filter"
+import { ItemsContext } from './App.jsx';
+import { useContext } from 'react';
+
 
 function Home({apiItems}){
+
+    const context = useContext(ItemsContext)
 
     return(
 
@@ -15,20 +20,22 @@ function Home({apiItems}){
             
             </div>
 
-            <div className="Test">
-
+            {apiItems.length > 0 &&  
+            
             <div className="ApiItems-container">
 
-                    <ul className="ApiItems">
+            <ul className="ApiItems">
 
-                    <ApiList apiItems={apiItems}></ApiList>
+            <ApiList apiItems={apiItems}></ApiList>
 
-                    </ul>
+            </ul>
 
-
-            </div>
+            </div>}
+            
+            {apiItems.length < 1 && <p className="unavailable">No results for "{context.search}"</p>}
+          
                 
-            </div>
+       
 
         </div>
 

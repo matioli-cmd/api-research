@@ -52,6 +52,7 @@ function App() {
 ])
 
 const [favorites, setFavorites] = useState([])
+const [search, setSearch] = useState('')
 
 function handleFavorite(name){
     const updatedArray = favorites.filter((n) => n != name)
@@ -60,10 +61,20 @@ function handleFavorite(name){
     setFavorites(updatedArray)
 }
 
+const location = useLocation()
+
+useEffect(() => {
+  window.scrollTo(0,0)
+
+
+}, [location])
+
 const contextValue = {
   favorites,    
   setFavorites,
   handleFavorite,
+  search,
+  setSearch
 };
 
   return (
@@ -75,7 +86,9 @@ const contextValue = {
 
     <Routes>
 
-      <Route path="/api-research/" element={ <Home apiItems={apiItems}></Home>}></Route>
+      <Route path="/api-research/" element={ <Home apiItems={
+        apiItems.filter((item) => item.name.toLowerCase().includes(search.trim().toLowerCase
+      ()))}></Home>}></Route>
 
       <Route path="/api-research/api/:name" element={<ApiPage apiItems={apiItems}></ApiPage>}></Route>
 
