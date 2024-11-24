@@ -1,11 +1,11 @@
 import Home from "./Home"
 import Header from "./Header"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import ApiPage from "./ApiPage"
 import Missing from "./Missing"
 import FAQ from "./FAQ"
 import Title from "./Title"
-import {Routes, Route, Router} from 'react-router-dom'
+import {Routes, Route, Router, useLocation} from 'react-router-dom'
 import Favorites from "./Favorites"
 import { createContext } from "react"
 export const ItemsContext = createContext();
