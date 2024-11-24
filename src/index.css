@@ -459,7 +459,7 @@ html, body {
 @media (max-width: 470px) {
   .API {
     padding: 15px;
-    width: 220px;
+    width: 300px;
   }
   .API h1 {
     font-size: 20px;
