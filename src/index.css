@@ -345,10 +345,16 @@ html, body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.Terminal code{
+.Terminal code {
   font-size: 13px;
   color: rgb(249, 206, 119);
+  display: block; 
+  word-wrap: break-word; 
+  max-width: 400px; 
+  white-space: normal; 
 }
+
+
 
 .Terminal {
   display: flex;
@@ -411,7 +417,7 @@ html, body {
   }
 
   .API_description {
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 15px;
     min-width: 100%; 
     max-width: 100%;
