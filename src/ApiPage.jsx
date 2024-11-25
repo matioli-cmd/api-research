@@ -9,8 +9,6 @@ function ApiPage({apiItems}){
 
     const chosenAPI = apiItems.find((api) => api.name == name)
 
-    console.log(chosenAPI)
-
     useEffect(() => {
         if(!chosenAPI){
             navigate('*')
@@ -29,7 +27,7 @@ function ApiPage({apiItems}){
                     <h1>
                         {chosenAPI.name}
                     </h1>
-                    <p>visit documentation <a href={chosenAPI.documentation_url}>here</a></p>
+                    <p>visit documentation <a href={chosenAPI.documentation_url} className="link">here</a></p>
                 </div>
                 
                 <div className="API_description">
