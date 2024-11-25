@@ -8,7 +8,7 @@ function Filter(){
     return(
         <div className="Search-container">
 
-        <input className="Search" placeholder="Search" value={context.search} onChange={(e) => context.setSearch(e.target.value)}></input>
+        <input className="Search" placeholder="Search" maxLength={20} value={context.search} onChange={(e) => context.setSearch(e.target.value)}></input>
 
         <select className="Difficulty">
             <option>All APIs</option>

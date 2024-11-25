@@ -12,6 +12,7 @@ function Api({api}){
         
         <div className="API">
         <div className="attributes">
+            
           <h1>
             <Link to={`/api-research/api/${api.name}`} className="api-link">
               {api.name}
@@ -20,6 +21,7 @@ function Api({api}){
           <p>{api.brief_desc}</p>
           <p className={`${api.difficulty}`}>{api.difficulty}</p>
         </div>
+
         <div className="Favorite" onClick={() => context.handleFavorite(api.name)}>
           {context.favorites.includes(api.name) ? (
             <MdFavorite />
