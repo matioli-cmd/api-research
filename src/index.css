@@ -4,7 +4,7 @@ html{
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 0; 
   box-sizing: border-box;
   touch-action: manipulation;
   
@@ -345,7 +345,7 @@ html, body {
 
 .Terminal code {
   font-size: 15px;
-  color: rgb(249, 206, 119);
+  color: rgb(255, 96, 96);
   display: block; 
   word-wrap: break-word; 
   max-width: 375px; 

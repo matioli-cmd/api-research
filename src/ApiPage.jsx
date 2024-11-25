@@ -29,7 +29,7 @@ function ApiPage({apiItems}){
                     <h1>
                         {chosenAPI.name}
                     </h1>
-                    <p>visit documentation <a href="/">here</a></p>
+                    <p>visit documentation <a href={chosenAPI.documentation_url}>here</a></p>
                 </div>
                 
                 <div className="API_description">
@@ -42,6 +42,8 @@ function ApiPage({apiItems}){
                 <div class="API_example">
   
                 <h1>Example API call</h1>
+                <p>Please check official documentation for proper usage of the API.</p>
+                <br></br>
   
   <div class="Terminal">
     <div class="lineNumbers">
@@ -59,7 +61,7 @@ function ApiPage({apiItems}){
       <p class="lineNumber">12</p>
     </div>
     <div class="code-content">
-      <p class="code-line"><code>const apiUrl = 'https://jsonplaceholder.typicode.com/postsssssssssssss';</code></p>
+      <p class="code-line"><code>const apiUrl = '{chosenAPI.url}';</code></p>
       <p class="code-line">&nbsp;</p>
       <p class="code-line"><code>fetch(apiUrl)</code></p>
       <p class="code-line"><code>&nbsp;.then(response =&gt; response.json())</code> </p>

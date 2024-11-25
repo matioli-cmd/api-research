@@ -3,7 +3,7 @@ function  FAQ(){
 
         <div className="FAQ">
 
-            
+<h1 className="favoriteTitle">FAQ</h1>
 
         </div>
     )
