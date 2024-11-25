@@ -60,15 +60,6 @@ function App() {
       'description': 'Provides random dog images, breed information, and a variety of dog-related data.'
     },
     {
-      'id': '6',
-      'url': 'https://api.exchangerate-api.com/v4/latest/USD',
-      'documentation_url': 'https://www.exchangerate-api.com/',
-      'difficulty': 'Beginner',
-      'name': 'ExchangeRate-API',
-      'brief_desc': 'Currency conversion and exchange rates',
-      'description': 'Returns exchange rates for all currencies with the ability to convert amounts between them.'
-    },
-    {
       'id': '7',
       'url': 'https://api.github.com/users/{username}',
       'documentation_url': 'https://docs.github.com/en/rest',
@@ -364,21 +355,19 @@ function App() {
       'name': 'DuckDuckGo API',
       'brief_desc': 'Search engine results',
       'description': 'Fetches search results from DuckDuckGo without tracking user data.'
-    },
-    {
-      'id': '40',
-      'url': 'https://api.publicapis.org/entries',
-      'documentation_url': 'https://publicapis.org/docs',
-      'difficulty': 'Beginner',
-      'name': 'Public APIs API',
-      'brief_desc': 'Public APIs directory',
-      'description': 'Provides a list of publicly available APIs for developers to use.'
     }
   ];
 
 const jsonFavorites = localStorage.getItem('favorites')
 const [favorites, setFavorites] = useState(jsonFavorites ? JSON.parse(jsonFavorites) : [])
 const [search, setSearch] = useState('')
+const [difficultyChosen, setDifficultyChosen] = useState('')
+const [barsClicked, setBarsClicked] = useState(false)
+
+function handleDifficultyChange(e){
+  setDifficultyChosen(e.target.value)
+  console.log(e.target.value)
+}
 
 function handleFavorite(name){
     const updatedArray = favorites.filter((n) => n != name)
@@ -391,7 +380,7 @@ const location = useLocation()
 
 useEffect(() => {
   window.scrollTo(0,0)
-
+  setBarsClicked(false)
 
 }, [location])
 
@@ -404,7 +393,8 @@ const contextValue = {
   setFavorites,
   handleFavorite,
   search,
-  setSearch
+  setSearch,
+  handleDifficultyChange
 };
 
   return (
@@ -412,13 +402,18 @@ const contextValue = {
     <ItemsContext.Provider value={contextValue}>
 
     <Title></Title>
-    <Header></Header>
+    <Header setBarsClicked={setBarsClicked} barsClicked={barsClicked}></Header>
 
     <Routes>
 
       <Route path="/api-research/" element={ <Home apiItems={
-        apiItems.filter((item) => item.name.toLowerCase().includes(search.trim().toLowerCase
-      ()))}></Home>}></Route>
+        apiItems.filter((item) => 
+          
+          item.name.toLowerCase().includes(search.trim().toLowerCase()) && item.difficulty.toLowerCase().includes(difficultyChosen.toLowerCase())
+        
+        )
+          
+          }></Home>}></Route>
 
       <Route path="/api-research/api/:name" element={<ApiPage apiItems={apiItems}></ApiPage>}></Route>
 

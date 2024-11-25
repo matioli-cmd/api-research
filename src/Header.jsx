@@ -1,18 +1,35 @@
 import { Link } from "react-router-dom"
+import { FaBars } from "react-icons/fa";
+import HeaderLinks from "./HeaderLinks";
+import { useState } from "react";
 
-function Header(){
+function Header({barsClicked, setBarsClicked}){
 
     return(
 
-        <header className="Header-container">
+        <div>
 
-             <div className="Header-links">
-                        <Link className="button-link" to={'/api-research/'}><h2>Home</h2></Link>
-                        <Link className="button-link" to={'/api-research/favorites'}><h2>Favorites</h2></Link>
-                        <Link className="button-link" to={'/api-research/faq'}><h2>FAQ</h2></Link>
+            <header className="Header-container">
+
+            <div className="Header-links">
+                   
+                    <FaBars className="Bars" onClick={() => setBarsClicked(prevstate => !prevstate)}></FaBars>
+
+
+
+
             </div>
-        
-        </header>
+
+
+            </header>
+
+
+            <HeaderLinks barsClicked={barsClicked}></HeaderLinks>
+
+
+        </div>
+
+    
 
 
     )
