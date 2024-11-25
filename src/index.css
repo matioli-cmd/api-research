@@ -405,7 +405,7 @@ html, body {
 .homeTitle{
     font-size: 15px;
     font-weight: bold;
-    color: #333;
+    color: #000000;
     margin: 0;
     padding: 20px;
     margin-bottom: 20px;
@@ -427,7 +427,7 @@ html, body {
 .favoriteTitle{
   font-size: 25px;
   font-weight: bold;
-  color: #333;
+  color: #000000;
   margin: 0;
   padding: 20px;
   margin-bottom: 20px;
