@@ -465,7 +465,7 @@ html, body {
   }
   .Terminal code {
     font-size: 13px;
-    color: rgb(249, 206, 119);
+    color: #d73b4b;
     display: block; 
     word-wrap: break-word; 
     max-width: 320px; 
@@ -474,7 +474,7 @@ html, body {
   
 
   .API_title {
-    font-size: 20px;
+    font-size: 17px;
     padding: 15px;
     width: 100%;
   }
@@ -526,7 +526,7 @@ html, body {
 @media (max-width: 470px) {
   .Terminal code {
     font-size: 13px;
-    color: rgb(249, 206, 119);
+    color: #d73b4b;
     display: block; 
     word-wrap: break-word; 
     max-width: 245px; 
@@ -548,7 +548,7 @@ html, body {
 
 
   .API_title {
-    font-size: 20px;
+    font-size: 15px;
     padding: 15px;
     width: 100%;
   }

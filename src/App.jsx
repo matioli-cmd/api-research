@@ -8,6 +8,7 @@ import Title from "./Title"
 import {Routes, Route, Router, useLocation} from 'react-router-dom'
 import Favorites from "./Favorites"
 import { createContext } from "react"
+import js from "@eslint/js"
 export const ItemsContext = createContext();
 
 function App() {
@@ -375,7 +376,8 @@ function App() {
     }
   ];
 
-const [favorites, setFavorites] = useState([])
+const jsonFavorites = localStorage.getItem('favorites')
+const [favorites, setFavorites] = useState(jsonFavorites ? JSON.parse(jsonFavorites) : [])
 const [search, setSearch] = useState('')
 
 function handleFavorite(name){
@@ -392,6 +394,10 @@ useEffect(() => {
 
 
 }, [location])
+
+useEffect(() => {
+  localStorage.setItem('favorites', JSON.stringify(favorites))
+}, [favorites])
 
 const contextValue = {
   favorites,    
